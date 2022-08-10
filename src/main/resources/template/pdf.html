@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="css/pdf.css" />
+    <style>body { font-family: SimSun; } td { border:solid windowtext 0.1pt; }</style>
+</head>
+
+<body>
+<p align=center style='text-align:center'>
+    <b style='mso-bidi-font-weight:
+      normal'>
+        <span style='font-size:16.0pt;font-family:宋体;mso-ascii-font-family:
+        "Times New Roman";mso-hansi-font-family:"Times New Roman";color:black'>标题</span>
+    </b>
+</p>
+<div>
+
+    <p style='margin-right:12.6pt'>
+      <span style='font-size:14pt;font-family:宋体;letter-spacing:.5pt'>本项目拟开展国际技术标准创制的途径分析、方法研究及实践工作，包括国际标准组织的管理特征研究和标准创制工作的技术特征研究，并据此结合本单位在“管状导体电缆”方面的技术成果，开展关于“管状导体电缆”的
+        <span>IEC</span>技术标准提案并争取负责承担标准编写工作的实践和探索，旨在研究、分析、总结国际标准创制工作的方法和经验，为国家电网公司，乃至我国的标准国际化战略的实施提供参考依据
+        <span>.</span>
+      </span>
+    </p>
+
+    <p style='margin-right:12.6pt'>
+      <span style='font-size:14pt;font-family:宋体;letter-spacing:.5pt'>
+      背景技术：文本自动生成是自然语言处理领域的一个重要研究方向，实现文本自动生成也是人工智能走向成熟的一个重要标志。简单来说，我们期待未来有一天计算机能够像人类一样会写作，能够撰写出高质量的自然语言文本。文本自动生成技术极具应用前景。例如，文本自动生成技术可以应用于智能问答与对话、机器翻译等系统，实现更加智能和自然的人机交互；我们也可以通过文本自动生成系统替代编辑实现新闻的自动撰写与发布，最终将有可能颠覆新闻出版行业；该项技术甚至可以用来帮助学者进行学术论文撰写，进而改变科研创作模式。文本生成是自然语言处理(nlp，naturallanguageprocessing)、自然语言生成(nlg，naturallanguagegeneration)领域当前的研究热点。
+目前，一般是由人工采集信息，并经过人工处理后编撰成文章，而传统的结构化数据生成或模板配置生成文本则非常死板性，并且具有局限性。技术实现要素：本发明的目的在于提供一种基于关键词的文章生成方法，从而解决现有技术中存在的前述问题。为了实现上述目的，本发明采用的技术方案如下：一种基于关键词的文章生成方法，所述方法包括如下步骤，
+s1、利用爬虫获取互联网上的散文内容，并将其作为初始训练数据集，对所述初始训练数据集进行分段，获取多个段落文本，给各个段落文本配置id编号，并将所有段落文本汇总为散文段落数据集；s2、根据id编号对所述散文段落数据集建立索引，以获取散文段落数据集的索引；随所述散文段落数据集进行切词，并对分词结果进行训练，以获取散文段落数据集的sentence特征向量模型；s3、获取用户提交的待生成文本的关键词和待生成文本的段落数量；
+s4、根据散文段落数据集的索引和sentence特征向量模型，使用待生成文本的关键词进行索引获取与待生成文本的段落数量相等的文本段落，各个文本段落依据id编号根据散文段落数据集的索引组成文章展示。
+优选的，步骤s2包括如下内容，s201、按照id编号对所述散文段落数据集建立正排索引，获取第一索引序列；按照token对所述散文段落数据集建立倒排索引，获取第二索引序列；s202、对所述散文段落数据集进行token分词，获取多个token，利用emlo模型训练各个token，以获取所有token的词向量；
+      </span>
+    </p>
+
+    <p style='margin-right:12.6pt'>
+      <span style='font-size:14pt;font-family:宋体;letter-spacing:.5pt'>
+          Background Art: Automatic text generation is an important research direction in the field of natural language processing, and realizing automatic text generation is also an important sign of the maturity of artificial intelligence. Simply put, we look forward to the day when computers will be able to write like humans and be able to compose high-quality natural language texts. The automatic text generation technology has great application prospects. For example, automatic text generation technology can be applied to intelligent question answering and dialogue, machine translation and other systems to achieve more intelligent and natural human-computer interaction; we can also use automatic text generation system instead of editing to achieve automatic news writing and publishing, and eventually there will be It could disrupt the news and publishing industry; the technology could even be used to help scholars write academic papers, thereby changing the model of scientific research creation. Text generation is a current research hotspot in the fields of natural language processing (nlp, natural language processing) and natural language generation (nlg, natural language generation).
+At present, information is generally collected manually and compiled into articles after manual processing, while the traditional structured data generation or template configuration generation of text is very rigid and limited. Technical implementation elements: The purpose of the present invention is to provide a method for generating articles based on keywords, so as to solve the aforementioned problems existing in the prior art. In order to achieve the above purpose, the technical solution adopted in the present invention is as follows: a method for generating articles based on keywords, the method comprises the following steps,
+s1. Use the crawler to obtain the prose content on the Internet, and use it as the initial training data set, segment the initial training data set, obtain multiple paragraph texts, configure id numbers for each paragraph text, and record all paragraph texts. Summarize into a prose paragraph data set; s2, build an index on the prose paragraph data set according to the id number to obtain the index of the prose paragraph data set; carry out word segmentation along with the prose paragraph data set, and train the word segmentation results to obtain the index of the prose paragraph data set; Obtain the sentence feature vector model of the prose paragraph dataset; s3, obtain the keywords of the text to be generated and the number of paragraphs of the text to be generated submitted by the user;
+s4. According to the index of the prose paragraph data set and the sentence feature vector model, use the keywords of the text to be generated for indexing to obtain text paragraphs equal to the number of paragraphs of the text to be generated. Each text paragraph is based on the id number according to the index of the prose paragraph data set. Make up article presentations.
+      </span>
+    </p>
+
+    <p style='margin-right:12.6pt'>
+      <span style='font-size:14pt;font-family:宋体;letter-spacing:.5pt'>
+          01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789
+      </span>
+    </p>
+
+</div>
+<div style="page-break-before: always;">
+</div>
+</body>
+
+</html>
