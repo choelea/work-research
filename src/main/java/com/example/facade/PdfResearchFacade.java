@@ -1,5 +1,6 @@
 package com.example.facade;
 
+import com.example.component.MyFontProvider;
 import com.example.config.FreemarkerConfiguration;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -18,7 +19,6 @@ import com.itextpdf.tool.xml.pipeline.end.PdfWriterPipeline;
 import com.itextpdf.tool.xml.pipeline.html.*;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
-import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -26,7 +26,6 @@ import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -36,11 +35,9 @@ import java.util.Map;
 
 @Slf4j
 @Service
-@AllArgsConstructor
 public class PdfResearchFacade {
     private static final String CHARSET_NAME = "UTF-8";
     private static final String FONT = "STSongStd-Light";
-
     @SneakyThrows
     public void pdfResearch(String fontNameParam, HttpServletResponse response){
         response.setCharacterEncoding(CHARSET_NAME);
@@ -76,16 +73,12 @@ public class PdfResearchFacade {
 
 
     private void generatePdf(String fontNameParam, String htmlStr, OutputStream out) throws IOException, DocumentException {
+        MyFontProvider myFontProvider =  new MyFontProvider(fontNameParam);
         Document document = new Document(PageSize.A4, 30.0F, 30.0F, 30.0F, 30.0F);
         document.setMargins(30.0F, 30.0F, 30.0F, 30.0F);
         PdfWriter writer = PdfWriter.getInstance(document, out);
         document.open();
-        HtmlPipelineContext htmlContext = new HtmlPipelineContext(new CssAppliersImpl(new XMLWorkerFontProvider() {
-            public Font getFont(String fontName, String encoding, float size, final int style) {
-                fontName = fontNameParam;
-                return super.getFont(fontName, encoding, size, style);
-            }
-        })) {
+        HtmlPipelineContext htmlContext = new HtmlPipelineContext(new CssAppliersImpl(myFontProvider)) {
             public HtmlPipelineContext clone() throws CloneNotSupportedException {
                 HtmlPipelineContext context = super.clone();
 
